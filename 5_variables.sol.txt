@@ -1,0 +1,48 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract Mycontract {
+
+string public palabra1  = " holamundo"; 
+string public  palabra2;
+uint256 number;
+string  borrador ="";
+bool public mybool;
+
+   function grabar_mi_bool(bool _mybool)public{
+       mybool = !_mybool;
+
+   }
+
+   function palabra_1(string memory _actualizarpalabra) public {
+        palabra1= _actualizarpalabra;
+    }
+
+       function palabra_2(string memory _actualizarpalabra) public{
+       palabra2 = _actualizarpalabra;
+    }
+   
+    function dos_palabras(string memory _dospalabra) public {
+        palabra1 = _dospalabra;
+        palabra2 = _dospalabra;
+        mybool = true;
+    }
+   function borrar_todo () public{
+       palabra1 = borrador;
+       palabra2 = borrador;
+        mybool = false;
+       
+     }
+
+    function numero(uint256 num) public {
+        number = num;
+       
+
+    }
+
+
+     function retornar_numero() public view returns (uint256){
+        return number;
+    }
+}
